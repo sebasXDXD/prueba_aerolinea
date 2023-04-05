@@ -10,7 +10,6 @@ export const getTickets = async () => {
 };
 
 export const createTicket = async (identification_number,passenger_name,passenger_lastname,origin,origin_date,destination, return_date, flight_type,chair_num ) => {
-  console.log(identification_number,passenger_name,passenger_lastname,origin,origin_date,destination, return_date, flight_type,chair_num );
     try {
       const [rows] = await pool.query(
         "INSERT INTO tickets (identification_number,passenger_name,passenger_lastname,origin,origin_date,destination, return_date ,flight_type,chair_num ) VALUES (?,?,?,?,?,?,?,?,?)",

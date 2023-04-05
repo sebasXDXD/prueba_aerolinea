@@ -8,7 +8,7 @@ jest.mock('../controllers/tickets.controller', () => ({
 const { createTicket } = require('../controllers/tickets.controller');
 
 describe('createTicketController', () => {
-  it('should respond with status 200 and message "Correo enviado" if ticket is created and email is sent', async () => {
+  it('deberia darme  200 y message "Correo enviado" si el tickete es creado envie un email', async () => {
     // Mock the createTicket function to return a new ticket
     const mockTicket = {
       id: 1,
@@ -42,7 +42,7 @@ describe('createTicketController', () => {
     expect(response.body.message).toBe('Correo enviado');
   });
 
-  it('should respond with status 500 and error message if there is an error', async () => {
+  it('deberia responder con status 500 y enviarme un error', async () => {
     // Mock the createTicket function to throw an error
     const errorMessage = 'Error al guardar';
     createTicket.mockImplementation(() => {

@@ -12,7 +12,6 @@ export const getCitysController = async (req, res) => {
 export const getCountryCitysController = async (req, res) => {
     try {
         const { country_id } = req.params;
-        console.log("esta es la ide c", country_id);
         const countrys = await getCountryCitys(country_id);
         res.json(countrys);
     } catch (error) {

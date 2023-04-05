@@ -6,15 +6,15 @@ import {
 
 const router = Router();
 // Guardar Tickets
-router.post("/tickets", () => {
+router.post("/tickets", 
     createTicketController
-});
+);
 
 
 // Obtener tickets
-router.get("/tickets", () => {
+router.get("/tickets", 
     getTicketsController
-});
+);
 
 
 
