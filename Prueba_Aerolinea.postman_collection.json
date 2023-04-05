@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "ae50e356-9de9-4ef1-ba8d-01f8637f2432",
+		"name": "Prueba_Aerolinea",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11531576"
+	},
+	"item": [
+		{
+			"name": "MS_USERS",
+			"item": [
+				{
+					"name": "creat-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"identification_number\": \"21321323131213\",\r\n  \"first_name\": \"Pedro\",\r\n  \"last_name\": \"Mendoza\",\r\n  \"phone_number\": \"555-1234\",\r\n  \"email\": \"juan.perez@example.com\",\r\n  \"age\": 66,\r\n  \"visa_expiration_date\": \"2024-12-31\",\r\n  \"millas\":300,\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MS_CITYS",
+			"item": [
+				{
+					"name": "get_countrys",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/api/citys",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"api",
+								"citys"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consult_countrys",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/api/citys/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"api",
+								"citys",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MS_TICKETS",
+			"item": [
+				{
+					"name": "store_tickets",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"passenger_name\": \"juan\",\r\n  \"passenger_lastname\": \"Pérez\",\r\n  \"mail\": \"sebastiandavidurbina@gmail.com\",\r\n  \"origin\": \"Sinaloa\",\r\n  \"origin_date\": \"2023-05-15\",\r\n  \"destination\": \"Cancun\",\r\n  \"return_date\": null,\r\n  \"flight_type\": \"directo\",\r\n  \"price\":30000,\r\n  \"visa_expiration\":null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/api/tickets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show_tickets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/api/tickets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MS_FLIGHTS",
+			"item": [
+				{
+					"name": "show_flights",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/flights?origin-IATA=MTY&destination-IATA=MEX&departure_date=2023-06-25&return_date=2023-06-28&meaning=RT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"flights"
+							],
+							"query": [
+								{
+									"key": "origin-IATA",
+									"value": "MTY"
+								},
+								{
+									"key": "destination-IATA",
+									"value": "MEX"
+								},
+								{
+									"key": "departure_date",
+									"value": "2023-06-25"
+								},
+								{
+									"key": "return_date",
+									"value": "2023-06-28"
+								},
+								{
+									"key": "meaning",
+									"value": "RT"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
