@@ -58,7 +58,7 @@ export const createTicketController = async (req, res) => {
       port: 587,
       auth: {
         user: "sebastianurbina.idetp@gmail.com",
-        pass: "atukrffbdzagryne",
+        pass: "",
       },
     });
 
