@@ -6,16 +6,7 @@ import {
 
 const router = Router();
 // Guardar Tickets
-router.post("/tickets", 
-    createTicketController
-);
-
-
+router.post("/tickets", createTicketController);
 // Obtener tickets
-router.get("/tickets", 
-    getTicketsController
-);
-
-
-
+router.get("/tickets", getTicketsController);
 export default router;

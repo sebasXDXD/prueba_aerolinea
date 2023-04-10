@@ -58,15 +58,13 @@ export const createTicketController = async (req, res) => {
       port: 587,
       auth: {
         user: "sebastianurbina.idetp@gmail.com",
-        pass: "",
+        pass: "nbtnfwplmfqhixiz",
       },
     });
 
     transporter.sendMail(mailOptions, function (error, info) {
       if (error) {
-        console.log(error);
-      } else {
-        console.log("Email enviado: " + info.response);
+        return(error);
       }
     });
 
